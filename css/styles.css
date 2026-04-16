@@ -1299,7 +1299,7 @@ a {
   margin-right: -18px;
 }
 
-/* ########################################## */
+/* ################################################ */
 
 /* Settings */
 .settings .card {
@@ -1317,6 +1317,49 @@ a {
   color: var(--paragraph-color);
   font-size: 0.9rem;
   margin-bottom: 25px;
+}
+input[type="checkbox"].special-checkbox {
+  appearance: none;
+}
+input[type="checkbox"].special-checkbox + .toggle-checkbox {
+  width: 90px;
+  height: 32px;
+  background-color: #dedcdc;
+  border-radius: 18px;
+  position: relative;
+  transition: var(--main-transition-durarion);
+}
+@media (max-width: 767px) {
+  input[type="checkbox"].special-checkbox + .toggle-checkbox {
+    transform: scale(0.65);
+    margin-right: -14px;
+  }
+}
+input[type="checkbox"].special-checkbox:checked + .toggle-checkbox {
+  background-color: var(--blue-color);
+}
+input[type="checkbox"].special-checkbox + .toggle-checkbox::before {
+  content: "\f00d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  width: 30px;
+  height: 28px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  background-color: #f4f4f4;
+  color: #aaa;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition-durarion);
+}
+input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
+  content: "\f00c";
+  color: var(--blue-color);
+  left: 57px;
 }
 /* Site Control */
 .settings .form-cont {
@@ -1336,8 +1379,6 @@ a {
   justify-content: space-between;
   align-items: center;
   font-size: 0.76rem;
-}
-.settings .form-cont form label input[type="checkbox"] {
 }
 .settings .form-cont form textarea {
   resize: none;
@@ -1400,12 +1441,19 @@ a {
   display: flex;
   flex-direction: column;
 }
+.security-info .security-options label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--paragraph-color);
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 25px;
+}
 .security-options p {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.security-options p input[type="checkbox"] {}
 .security-options p:nth-child(odd) {
   font-size: 1.1rem;
 }
@@ -1414,7 +1462,7 @@ a {
 }
 .security-options p:nth-child(even) {
   color: var(--paragraph-color);
-  font-size: .84rem;
+  font-size: 0.84rem;
   margin-top: 10px;
 }
 .security-options p:nth-child(even):not(:last-child) {
@@ -1461,7 +1509,7 @@ a {
   border: none;
 }
 .settings .social-info .form-cont form input::placeholder {
-  font-size: .83rem;
+  font-size: 0.83rem;
 }
 .settings .social-info .form-cont form > div i {
   position: absolute;
@@ -1497,7 +1545,25 @@ a {
   height: 16px;
 }
 
-
+/* Backup Manager */
+.settings .backup-manager .plans {
+}
+.settings .backup-manager .plans .duration {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 25px;
+}
+.settings .backup-manager .plans .duration label {
+  display: flex;
+  align-items: center;
+}
+.settings .backup-manager .duration input[type="radio"] {
+  margin-right: 13px;
+  width: 18px;
+  height: 18px;
+}
 
 /* 
 
@@ -1570,6 +1636,10 @@ a {
 -- Date : 12 / 4 / 2026
 -- Time : 1 : 40
 -- Duration : 2 : 15 hr
+
+-- Date : 16 / 4 / 2026
+-- Time : 6 : 42
+-- Duration : 40 min
 
 
 

@@ -100,9 +100,10 @@
                 <caption>
                   Website Control
                 </caption>
-                <label for="close-open-btn">
+                <label>
                   Open/Close Website And Type The Reason
-                  <input type="checkbox" id="close-open-btn" checked />
+                  <input type="checkbox" class="special-checkbox" checked />
+                  <div class="toggle-checkbox"></div>
                 </label>
                 <textarea placeholder="Close Message Content"></textarea>
               </form>
@@ -150,10 +151,11 @@
                 <span class="btn">Change</span>
               </p>
               <p>Two-Factor Authentication</p>
-              <p>
+              <label>
                 Enable/Disable The Feature
-                <input type="checkbox" checked />
-              </p>
+                <input type="checkbox" class="special-checkbox" checked />
+                <div class="toggle-checkbox"></div>
+              </label>
               <p>Devices</p>
               <p>
                 Check The Login Devices List
@@ -169,31 +171,19 @@
               <form action="#">
                 <div class="x-twitter">
                   <i class="fa-brands fa-x-twitter"></i>
-                  <input
-                    type="text"
-                    placeholder="X Username"
-                  />
+                  <input type="text" placeholder="X Username" />
                 </div>
                 <div class="facebook">
                   <i class="fa-brands fa-facebook-f"></i>
-                  <input
-                    type="text"
-                    placeholder="Facebook Username"
-                  />
+                  <input type="text" placeholder="Facebook Username" />
                 </div>
                 <div class="linkedin">
                   <i class="fa-brands fa-linkedin-in"></i>
-                  <input
-                    type="text"
-                    placeholder="LinkedIn Username"
-                  />
+                  <input type="text" placeholder="LinkedIn Username" />
                 </div>
                 <div class="youtube">
                   <i class="fa-brands fa-youtube"></i>
-                  <input
-                    type="text"
-                    placeholder="Youtube Username"
-                  />
+                  <input type="text" placeholder="Youtube Username" />
                 </div>
               </form>
             </div>
@@ -228,6 +218,33 @@
                 Top Search Items
               </li>
             </ul>
+          </div>
+
+          <div class="backup-manager card">
+            <h1>Backup Manager</h1>
+            <p>Control Backup Time And Location</p>
+            <div class="plans">
+              <div class="duration">
+                <label for="daily-plan">
+                  <input
+                    type="radio"
+                    id="daily-plan"
+                    name="plan-duration"
+                    checked
+                  />
+                  Daily
+                </label>
+                <label for="weekly-plan">
+                  <input type="radio" id="weekly-plan" name="plan-duration" />
+                  Weekly
+                </label>
+                <label for="monthly-plan">
+                  <input type="radio" id="monthly-plan" name="plan-duration" />
+                  Monthly
+                </label>
+              </div>
+              <div class="type"></div>
+            </div>
           </div>
         </div>
       </section>
