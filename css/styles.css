@@ -1535,16 +1535,48 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
   flex: 1;
 }
 .settings .widgets-control .widgets li {
-  margin-bottom: 20px;
-  font-size: 1.1rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 .settings .widgets-control .widgets li input {
-  margin-right: 10px;
-  width: 16px;
-  height: 16px;
+  appearance: none;
 }
-
+.settings .widgets-control .widgets li input + label {
+  font-size: 1.1rem;
+  padding-left: 30px;
+  position: relative;
+}
+.settings .widgets-control .widgets li input + label::before,
+.settings .widgets-control .widgets li input + label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+.settings .widgets-control .widgets li input + label::before {
+  border: 1px solid var(--grey-color);
+  z-index: 2;
+}
+.settings .widgets-control .widgets li input + label::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-color);
+  color: #fff;
+  transition: var(--main-transition-durarion);
+  transform: scale(0) rotate(360deg);
+}
+.settings .widgets-control .widgets li input:checked + label::after {
+  transform: scale(1);
+}
 /* Backup Manager */
 .settings .backup-manager .plans {
 }
