@@ -82,7 +82,7 @@ a {
   font-size: 1.8rem;
   width: fit-content;
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .special-heading::before,
 .special-heading::after {
@@ -296,8 +296,14 @@ a {
 }
 
 /* Start Dashboard & Settings */
-.dashboard,
-.settings {
+.parent > .dashboard,
+.parent > .settings,
+.parent > .profile,
+.parent > .projects,
+.parent > .courses,
+.parent > .friends,
+.parent > .files,
+.parent > .plans {
   grid-column-start: 2;
   grid-row-start: 2;
   width: 100%;
@@ -305,22 +311,40 @@ a {
   background-color: #f3f4f6;
 }
 @media (max-width: 767px) {
-  .dashboard,
-  .settings {
+  .parent > .dashboard,
+  .parent > .settings,
+  .parent > .profile,
+  .parent > .projects,
+  .parenty > .courses,
+  .parent > .friends,
+  .parent > .files,
+  .parent > .plans {
     padding: 0;
     padding-left: 5px;
     padding-top: 10px;
   }
 }
 .dashboard-container,
-.settings-container {
+.settings-container,
+.profile-container,
+.projects-container,
+.courses-container,
+.friends-container,
+.files-container,
+.plans-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 50px;
 }
 @media (max-width: 991px) {
   .dashboard-container,
-  .settings-container {
+  .settings-container,
+  .profile-container,
+  .projects-container,
+  .courses-container,
+  .friends-container,
+  .files-container,
+  .plans-container {
     grid-template-columns: minmax(335px, 1fr);
   }
 }
@@ -1235,39 +1259,39 @@ a {
   width: 100%;
   overflow-x: auto;
 }
-.projects .projects-details,
-.projects .projects-details th,
-.projects .projects-details td {
+.dashboard .projects .projects-details,
+.dashboard .projects .projects-details th,
+.dashboard .projects .projects-details td {
   border: 1px solid #ccc;
   border-collapse: collapse;
 }
-.projects .projects-details {
+.dashboard .projects .projects-details {
   width: 100%;
   min-width: 850px;
   text-align: left;
 }
-.projects .projects-details thead {
+.dashboard .projects .projects-details thead {
   background-color: #ccc;
   font-size: 0.94rem;
 }
-.projects .projects-details th {
+.dashboard .projects .projects-details th {
   padding: 15px;
   padding-left: 10px;
 }
-.projects .projects-details tbody {
+.dashboard .projects .projects-details tbody {
   font-size: 0.85rem;
 }
-.projects .projects-details tbody tr {
+.dashboard .projects .projects-details tbody tr {
   transition: var(--main-transition-durarion);
 }
-.projects .projects-details tbody tr:hover {
+.dashboard .projects .projects-details tbody tr:hover {
   background-color: rgba(229, 226, 221, 0.2);
 }
-.projects .projects-details td {
+.dashboard .projects .projects-details td {
   padding: 20px;
   padding-left: 10px;
 }
-.projects .projects-details tbody .btn {
+.dashboard .projects .projects-details tbody .btn {
   width: fit-content;
   color: #fff;
   padding: 8px 25px;
@@ -1280,19 +1304,19 @@ a {
   justify-content: center;
   align-items: center;
 }
-.projects .projects-details tbody .btn.completed {
+.dashboard .projects .projects-details tbody .btn.completed {
   background-color: var(--green-color);
 }
-.projects .projects-details tbody .btn.pending {
+.dashboard .projects .projects-details tbody .btn.pending {
   background-color: var(--orange-color);
 }
-.projects .projects-details tbody .btn.inprogress {
+.dashboard .projects .projects-details tbody .btn.inprogress {
   background-color: var(--blue-color);
 }
-.projects .projects-details tbody .btn.rejected {
+.dashboard .projects .projects-details tbody .btn.rejected {
   background-color: var(--red-color);
 }
-.projects .projects-details tbody img {
+.dashboard .projects .projects-details tbody img {
   max-width: 100%;
   width: 30px;
   border-radius: 50%;
@@ -1578,8 +1602,6 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
   transform: scale(1);
 }
 /* Backup Manager */
-.settings .backup-manager .plans {
-}
 .settings .backup-manager .plans .duration {
   display: flex;
   flex-direction: column;
@@ -1596,6 +1618,95 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
   width: 18px;
   height: 18px;
 }
+.settings .backup-manager .plans .type {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+.settings .backup-manager .plans .type > div {
+  width: 120px;
+  height: 80px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+  padding: 13px;
+  cursor: pointer;
+  position: relative;
+}
+.settings .backup-manager .plans .type label {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+.settings .backup-manager .plans .type > div input[type="radio"] {
+  appearance: none;
+}
+.settings .backup-manager .plans .type > div input:checked + .toggle-switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--blue-color);
+  border-radius: 6px;
+}
+
+/* ################################################ */
+
+/* Start Profile */
+.profile .col-user {
+  grid-column: 2 / -1;
+  width: 100%;
+}
+.profile .col-user .user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-right: 1px solid #ccc;
+}
+.profile .col-user .user-info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.profile .col-user .user-info .user-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.profile .col-user .user-info .user-level {
+  color: var(--paragraph-color);
+  font-size: .9rem;
+}
+.profile .col-user .user-info .progress-bar {
+  width: 11rem;
+  height: 5px;
+  background-color: #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.profile .col-user .user-info .progress-bar span {
+  display: block;
+  background-color: var(--blue-color);
+  width: 70%;
+  height: 100%;
+}
+.profile .col-user .user-info .rating {
+  color: var(--orange-color);
+}
+.profile .col-user .user-info .rating-count {
+  color: var(--paragraph-color);
+  font-size: .95rem;
+}
+
 
 /* 
 
