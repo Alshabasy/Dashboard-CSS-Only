@@ -1326,18 +1326,18 @@ a {
 /* ################################################ */
 
 /* Settings */
-.settings .card {
+.card {
   background-color: #fff;
   border-radius: var(--card-border-radius);
   padding: var(--card-padding);
   display: flex;
   flex-direction: column;
 }
-.settings .card > h1 {
+.card > h1 {
   font-size: var(--headline-size);
   margin-bottom: 10px;
 }
-.settings .card > p {
+.card > p {
   color: var(--paragraph-color);
   font-size: 0.9rem;
   margin-bottom: 25px;
@@ -1662,10 +1662,19 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
 
 /* Start Profile */
 .profile .col-user {
-  grid-column: 2 / -1;
+  grid-column: 1 / -1;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .profile .col-user {
+    flex-direction: column;
+  }
 }
 .profile .col-user .user-info {
+  flex-basis: 15%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1673,9 +1682,17 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
   gap: 15px;
   border-right: 1px solid #ccc;
 }
+@media (max-width: 767px) {
+  .profile .col-user .user-info  {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+  }
+}
 .profile .col-user .user-info img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
 }
 .profile .col-user .user-info .user-name {
@@ -1684,10 +1701,10 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
 }
 .profile .col-user .user-info .user-level {
   color: var(--paragraph-color);
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 .profile .col-user .user-info .progress-bar {
-  width: 11rem;
+  width: 10rem;
   height: 5px;
   background-color: #ccc;
   border-radius: 8px;
@@ -1701,11 +1718,134 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
 }
 .profile .col-user .user-info .rating {
   color: var(--orange-color);
+  font-size: .93rem;
 }
 .profile .col-user .user-info .rating-count {
   color: var(--paragraph-color);
-  font-size: .95rem;
+  font-size: 0.91rem;
 }
+.profile .col-user .user-full-details {
+  flex: 1;
+}
+.profile .col-user .user-full-details > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 50px;
+  row-gap: 10px;
+}
+@media (max-width: 767px) {
+  .profile .col-user .user-full-details > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.profile .col-user .user-full-details > div:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 25px;
+}
+.profile .col-user .user-full-details > div:not(:first-child) {
+  margin-top: 20px;
+}
+.profile .col-user .user-full-details > div > span:first-of-type {
+  flex-basis: 100%;
+  color: var(--paragraph-color);
+  font-size: .96rem;
+}
+.profile .col-user .user-full-details > div p {
+  font-size: .92rem;
+}
+.profile .col-user .user-full-details > div p span {
+  color: var(--paragraph-color);
+}
+.profile .user-full-details [type="checkbox"].special-checkbox + .toggle-checkbox {
+  width: 90px;
+  height: 20px;
+  margin-top: -19px;
+}
+.profile .user-full-details [type="checkbox"].special-checkbox + .toggle-checkbox::before {
+  height: 16px;
+  width: 16px;
+  font-size: .6rem;
+  top: 2px;
+}
+.profile .user-full-details [type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
+  left: 70px;
+}
+
+/* MY Skills */
+.profile .my-skills .skills-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+}
+@media (max-width: 767px) {
+  .profile .my-skills .skills-list li {
+    justify-content: center;
+  }
+}
+.profile .my-skills .skills-list li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+.profile .my-skills .skills-list li p {
+  background-color: #ebebeb;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: .83rem;
+}
+
+/* Latest Activities */
+.profile .latest-activities {
+  grid-column: 2 / -1;
+}
+@media (max-width: 767px) {
+  .profile .latest-activities {
+    grid-column: 1 / -1;
+  }
+}
+.profile .latest-activities .activity {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+@media (max-width: 767px) {
+  .profile .latest-activities .activity {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.profile .latest-activities .activity:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+.profile .latest-activities img {
+  width: 60px;
+  height: 60px;
+}
+.profile .latest-activities .activity .details {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .profile .latest-activities .activity .details {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .profile .latest-activities .activity .details > div {
+    margin-top: 15px;
+  }
+}
+.profile .latest-activities .activity .details > div p:last-of-type {
+  color: var(--paragraph-color);
+  margin-top: 15px;
+}
+
+
 
 
 /* 
@@ -1780,9 +1920,20 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
 -- Time : 1 : 40
 -- Duration : 2 : 15 hr
 
+
 -- Date : 16 / 4 / 2026
 -- Time : 6 : 42
 -- Duration : 40 min
+
+
+-- Date : 23 / 4 / 2026
+-- Time : 10 : 05
+-- Duration : 1 hr
+
+
+-- Date : 25 / 4 / 2026
+-- Time : 2 : 37
+-- Duration : 1 : 15 hr
 
 
 
