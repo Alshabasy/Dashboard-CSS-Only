@@ -1796,8 +1796,10 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
 }
 
 /* Latest Activities */
-.profile .latest-activities {
-  grid-column: 2 / -1;
+@media (min-width: 1230px) {
+  .profile .latest-activities {
+    grid-column: 2 / -1;
+  }
 }
 @media (max-width: 767px) {
   .profile .latest-activities {
@@ -1845,8 +1847,176 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
   margin-top: 15px;
 }
 
+/* Projects */
+.projects .projects-container {
+  gap: 17px;
+}
+.projects .projects-container .project {
+  display: flex;
+  justify-content: flex-start;
+  gap: 35px;
+}
+.projects .projects-container .project .info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 15px;
+}
+.projects .projects-container .project .info h1 {
+  font-size: 1.2rem;
+}
+.projects .projects-container .project .info p {
+  color: var(--paragraph-color);
+}
+.projects .projects-container .project .info .date {
+  font-size: .87rem;
+}
+.projects .projects-container .project .info p:last-of-type {
+  flex-grow: 1;
+  font-size: .92rem;
+}
+.projects .projects-container .project .team img {
+  width: 40px;
+  border-radius: 50%;
+}
+.projects .projects-container .project .team img:not(:first-child) {
+  margin-left: -13px;
+}
+.projects .projects-container .project .technologies {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  border-top: 1px solid #cccccc91;
+  border-bottom: 1px solid #cccccc91;
+  padding: 17px 0;
+}
+.projects .projects-container .project .technologies p {
+  padding: 5px 8px;
+  background-color: #dedcdc;
+  font-size: .70rem;
+  border-radius: 6px;
+}
+.projects .projects-container .project .progress-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects .projects-container .project .progress-price .progress-bar {
+  width: 55%;
+  height: 7px;
+  background-color: #dedcdc;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.projects .projects-container .project .progress-price .progress-bar span {
+  display: block;
+  width: 80%;
+  height: 100%;
+  background-color: var(--red-color);
+}
+.projects .projects-container .project:nth-child(even) .progress-price .progress-bar span {
+  background-color: var(--green-color);
+}
+.projects .projects-container .project .progress-price .price {
+  color: var(--paragraph-color);
+  font-size: .93rem;
+}
 
-
+/* Courses */
+.courses .courses-container {
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  gap: 25px;
+}
+.courses .courses-container .course {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .05);
+}
+.courses .courses-container .course::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 99;
+}
+.courses .courses-container .course:hover::before {
+  animation: flashing .32s 1 linear;
+}
+@keyframes flashing {
+  100% {
+    width: 200%;
+    height: 200%;
+  }
+}
+.courses .courses-container .course .image-preview {
+  width: 100%;
+  height: 220px;
+  position: relative;
+}
+.courses .courses-container .course .image-preview .instructor {
+  width: 60px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.courses .courses-container .course .image-preview .course-image {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.courses .courses-container .course .course-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+.courses .courses-container .course .course-info h1 {
+  font-size: 1.03rem;
+  width: 100%;
+}
+.courses .courses-container .course .course-info p {
+  font-size: .92rem;
+  color: var(--paragraph-color);
+  line-height: 1.5;
+}
+.courses .courses-container .course .course-info .btn {
+  color: #fff;
+  background-color: var(--blue-color);
+  height: 28px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  font-size: .84rem;
+  position: relative;
+  bottom: -14px;
+  align-self: center;
+  cursor: pointer;
+}
+.courses .courses-container .course .course-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+}
+.courses .courses-container .course .course-stats > div {
+  color: var(--paragraph-color);
+  font-size: .85rem;
+}
 
 /* 
 
@@ -1935,7 +2105,13 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
 -- Time : 2 : 37
 -- Duration : 1 : 15 hr
 
+######################################################
 
+-- [ ### Other Pages ### ]
+
+-- Date : 29 / 4 / 2026
+-- Time : 7 : 30
+-- Duration : 1 : 15 hr
 
 
 
