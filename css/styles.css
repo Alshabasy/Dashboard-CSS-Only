@@ -272,7 +272,7 @@ a {
 @media (max-width: 767px) {
   .side-bar .nav-bar li a {
     justify-content: start;
-    font-size: 11px;
+    font-size: 11px !important;
   }
 }
 .side-bar .nav-bar li.active a {
@@ -288,6 +288,7 @@ a {
 .side-bar .nav-bar li a span {
   flex: 1;
   text-align: start;
+  font-size: 13px;
 }
 @media (max-width: 767px) {
   .side-bar .nav-bar li a span {
@@ -1683,7 +1684,7 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
   border-right: 1px solid #ccc;
 }
 @media (max-width: 767px) {
-  .profile .col-user .user-info  {
+  .profile .col-user .user-info {
     border: none;
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
@@ -1718,7 +1719,7 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
 }
 .profile .col-user .user-info .rating {
   color: var(--orange-color);
-  font-size: .93rem;
+  font-size: 0.93rem;
 }
 .profile .col-user .user-info .rating-count {
   color: var(--paragraph-color);
@@ -1750,26 +1751,35 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
 .profile .col-user .user-full-details > div > span:first-of-type {
   flex-basis: 100%;
   color: var(--paragraph-color);
-  font-size: .96rem;
+  font-size: 0.96rem;
 }
 .profile .col-user .user-full-details > div p {
-  font-size: .92rem;
+  font-size: 0.92rem;
 }
 .profile .col-user .user-full-details > div p span {
   color: var(--paragraph-color);
 }
-.profile .user-full-details [type="checkbox"].special-checkbox + .toggle-checkbox {
+.profile
+  .user-full-details
+  [type="checkbox"].special-checkbox
+  + .toggle-checkbox {
   width: 90px;
   height: 20px;
   margin-top: -19px;
 }
-.profile .user-full-details [type="checkbox"].special-checkbox + .toggle-checkbox::before {
+.profile
+  .user-full-details
+  [type="checkbox"].special-checkbox
+  + .toggle-checkbox::before {
   height: 16px;
   width: 16px;
-  font-size: .6rem;
+  font-size: 0.6rem;
   top: 2px;
 }
-.profile .user-full-details [type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
+.profile
+  .user-full-details
+  [type="checkbox"].special-checkbox:checked
+  + .toggle-checkbox::before {
   left: 70px;
 }
 
@@ -1792,7 +1802,7 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
   background-color: #ebebeb;
   border-radius: 6px;
   padding: 8px 12px;
-  font-size: .83rem;
+  font-size: 0.83rem;
 }
 
 /* Latest Activities */
@@ -1869,11 +1879,11 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
   color: var(--paragraph-color);
 }
 .projects .projects-container .project .info .date {
-  font-size: .87rem;
+  font-size: 0.87rem;
 }
 .projects .projects-container .project .info p:last-of-type {
   flex-grow: 1;
-  font-size: .92rem;
+  font-size: 0.92rem;
 }
 .projects .projects-container .project .team img {
   width: 40px;
@@ -1894,7 +1904,7 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
 .projects .projects-container .project .technologies p {
   padding: 5px 8px;
   background-color: #dedcdc;
-  font-size: .70rem;
+  font-size: 0.7rem;
   border-radius: 6px;
 }
 .projects .projects-container .project .progress-price {
@@ -1915,12 +1925,17 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
   height: 100%;
   background-color: var(--red-color);
 }
-.projects .projects-container .project:nth-child(even) .progress-price .progress-bar span {
+.projects
+  .projects-container
+  .project:nth-child(even)
+  .progress-price
+  .progress-bar
+  span {
   background-color: var(--green-color);
 }
 .projects .projects-container .project .progress-price .price {
   color: var(--paragraph-color);
-  font-size: .93rem;
+  font-size: 0.93rem;
 }
 
 /* Courses */
@@ -1935,7 +1950,7 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
   overflow: hidden;
   border-radius: 6px;
   position: relative;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, .05);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
 }
 .courses .courses-container .course::before {
   content: "";
@@ -1949,7 +1964,7 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
   z-index: 99;
 }
 .courses .courses-container .course:hover::before {
-  animation: flashing .32s 1 linear;
+  animation: flashing 0.32s 1 linear;
 }
 @keyframes flashing {
   100% {
@@ -1988,7 +2003,7 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
   width: 100%;
 }
 .courses .courses-container .course .course-info p {
-  font-size: .92rem;
+  font-size: 0.92rem;
   color: var(--paragraph-color);
   line-height: 1.5;
 }
@@ -2001,7 +2016,7 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
   justify-content: center;
   align-items: center;
   border-radius: 6px;
-  font-size: .84rem;
+  font-size: 0.84rem;
   position: relative;
   bottom: -14px;
   align-self: center;
@@ -2015,7 +2030,389 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
 }
 .courses .courses-container .course .course-stats > div {
   color: var(--paragraph-color);
-  font-size: .85rem;
+  font-size: 0.85rem;
+}
+
+/* Friends */
+.friends .friends-container {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  column-gap: 15px;
+}
+.friends .friends-container .member {
+  display: flex;
+  flex-direction: column;
+}
+.friends .friends-container .member .user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.friends .friends-container .member .user-info .contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+.friends .friends-container .member .user-info .contact i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #dedcdc;
+  transition: var(--main-transition-durarion);
+  font-size: 0.8rem;
+}
+.friends .friends-container .member .user-info .contact i.phone:hover {
+  background-color: var(--green-color);
+  color: #fff;
+}
+.friends .friends-container .member .user-info .contact i.email:hover {
+  background-color: var(--red-color);
+  color: #fff;
+}
+.friends .friends-container .member .user-info img {
+  max-width: 100%;
+  width: 90px;
+  border-radius: 50%;
+}
+.friends .friends-container .member .user-info h1 {
+  font-size: 1.2rem;
+}
+.friends .friends-container .member .user-info p {
+  font-size: 0.9rem;
+  color: var(--paragraph-color);
+}
+.friends .friends-container .member .user-stats {
+  padding: 15px 0;
+  margin-top: 15px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.friends .friends-container .member .user-stats p:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+.friends .friends-container .member .user-stats p {
+  font-size: 0.85rem;
+}
+.friends .friends-container .member .user-stats p i {
+  margin-right: 5px;
+}
+.friends .friends-container .member .user-stats .vip-membership {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--orange-color);
+  opacity: 0.3;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.friends .friends-container .member .user-loging {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 0;
+}
+.friends .friends-container .member .user-loging span:first-of-type {
+  font-size: 0.8rem;
+}
+.friends .friends-container .member .user-loging .control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.friends .friends-container .member .user-loging .control .btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.friends .friends-container .member .user-loging .control .btn.profile-btn {
+  background-color: var(--blue-color);
+}
+.friends .friends-container .member .user-loging .control .btn.remove-btn {
+  background-color: var(--red-color);
+}
+
+/* Files */
+.files {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  column-gap: 20px;
+}
+@media (max-width: 767px) {
+  .files {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+  }
+}
+.files .files-container {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 15px;
+  row-gap: 20px;
+}
+@media (min-width: 768px) {
+  .files .files-container {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+}
+@media (max-width: 767px) {
+  .files .files-container {
+    grid-row-start: 3;
+  }
+}
+.files .files-container .file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.files .files-container .file .download-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #888;
+  transition: var(--main-transition-durarion);
+  cursor: pointer;
+}
+.files .files-container .file .download-btn:hover {
+  color: #121213;
+}
+.files .files-container .file p {
+  margin: 0;
+}
+.files .files-container .file img {
+  width: 70px;
+  transition: var(--main-transition-durarion);
+}
+.files .files-container .file img:hover {
+  transform: rotate(7deg);
+}
+.files .files-container .file .file-name {
+  font-size: 0.9rem;
+  margin: 15px 0;
+  color: black;
+}
+.files .files-container .file .file-publisher {
+  font-size: 0.8rem;
+  align-self: flex-start;
+}
+.files .files-container .file .file-info {
+  width: 100%;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--paragraph-color);
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  margin-top: 15px;
+}
+.files .files-statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fffe;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 6px;
+}
+@media (min-width: 768px) {
+  .files .files-statistics {
+    grid-row: 2 / -1;
+    grid-column: 2 / -1;
+  }
+}
+@media (max-width: 767px) {
+  .files .files-statistics {
+    grid-row-start: 2;
+    margin-bottom: 20px;
+  }
+}
+.files .files-statistics > h1 {
+  font-size: 1.4rem;
+}
+@media (max-width: 767px) {
+  .files .files-statistics > h1 {
+    align-self: center;
+  }
+}
+.files .files-statistics ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.files .files-statistics ul li {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px;
+  font-size: 0.9rem;
+  gap: 20px;
+}
+.files .files-statistics ul li i {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.files .files-statistics ul li i.pdf {
+  background-color: rgba(0, 117, 255, 0.13);
+  color: var(--blue-color);
+}
+.files .files-statistics ul li i.image {
+  background-color: rgb(245, 158, 11, 0.13);
+  color: #f59e0b;
+}
+.files .files-statistics ul li i.word {
+  background-color: rgb(244, 67, 54, 0.13);
+  color: #f44336;
+}
+.files .files-statistics ul li i.csv {
+  background-color: rgb(34, 197, 94, 0.13);
+  color: #22c55e;
+}
+.files .files-statistics ul li .file-type {
+  margin-right: 60px;
+  margin-left: -5px;
+  width: max-content;
+}
+.files .files-statistics ul li .file-type p:not(:first-of-type) {
+  color: var(--paragraph-color);
+  font-size: 0.9rem;
+}
+.files .files-statistics ul li > p {
+  color: var(--paragraph-color);
+  flex: 1;
+  justify-self: flex-end;
+  text-align: end;
+}
+.files .files-statistics .upload-btn {
+  padding: 10px 15px;
+  border-radius: 6px;
+  background-color: var(--blue-color);
+  color: #fff;
+  cursor: pointer;
+  align-self: center;
+}
+.files .files-statistics .upload-btn i {
+  margin-right: 5px;
+}
+.files .files-statistics .upload-btn:hover i {
+  animation: up-down 0.6s infinite alternate;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Plans */
+.plans .plans-container {
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  column-gap: 20px;
+  row-gap: 25px;
+}
+@media (max-width: 991px) {
+  .plans .plans-container {
+    grid-template-columns: minmax(250px, 1fr);
+  }
+}
+.plans .plans-container .plan .price {
+  text-align: center;
+  padding: 40px 0;
+  color: #fff;
+  outline: 5px solid #fff;
+  outline-offset: -10px;
+}
+.plans .plans-container .plan .price > h1 {
+  font-size: 1.3rem;
+}
+.plans .plans-container .plan .price > p {
+  font-size: 2.6rem;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.plans .plans-container .plan .features {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+.plans .plans-container .plan .features li {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  position: relative;
+}
+.plans .plans-container .plan .features li::before {
+  content: "\f05a";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  cursor: pointer;
+}
+.plans .plans-container .plan .features li:not(:first-child) {
+  border-top: 1px solid #ccc;
+}
+.plans .plans-container .plan .features li i {
+  margin-right: 15px;
+}
+.plans .plans-container .plan .features li i.true {
+  color: var(--green-color);
+}
+.plans .plans-container .plan .features li i.false {
+  color: var(--red-color);
+}
+.plans .plans-container .plan .features li span {
+  font-size: 0.9rem;
+  word-spacing: 3px;
+}
+.plans .plans-container .plan .join-btn {
+  padding: 10px 15px;
+  border-radius: 6px;
+  color: #fff;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.plans .plans-container .plan.free-plan .price {
+  background-color: var(--green-color);
+}
+.plans .plans-container .plan.free-plan .join-btn {
+  background-color: var(--green-color);
+}
+.plans .plans-container .plan.basic-plan .price {
+  background-color: var(--blue-color);
+}
+.plans .plans-container .plan.basic-plan .join-btn {
+  background-color: var(--blue-color);
+}
+.plans .plans-container .plan.premium-plan .price {
+  background-color: var(--orange-color);
+}
+.plans .plans-container .plan.premium-plan .join-btn {
+  color: var(--paragraph-color);
 }
 
 /* 
@@ -2112,6 +2509,11 @@ input[type="checkbox"].special-checkbox:checked + .toggle-checkbox::before {
 -- Date : 29 / 4 / 2026
 -- Time : 7 : 30
 -- Duration : 1 : 15 hr
+
+
+-- Date : 6 / 5 / 2026
+-- Time : 11 : 30
+-- Duration :  3 : 00 hr
 
 
 
