@@ -39,11 +39,17 @@
 
 Dashboard-CSS-Only/
 │
+
 ├── index.html          # Main dashboard page
+
 ├── style.css           # All styles (no external deps)
+
 │
+
 └── assets/             # Icons, images, fonts
+
     ├── icons/
+    
     └── images/
 
 ---
