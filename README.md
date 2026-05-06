@@ -35,20 +35,6 @@
 
 ---
 
-## 🧠 Engineering Highlights
-
-```css
-/* Example: CSS Grid-powered dashboard layout */
-.dashboard {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    grid-template-rows: auto 1fr;
-    min-height: 100vh;
-}
-```
-
----
-
 ## 📁 Project Structure
 
 Dashboard-CSS-Only/
